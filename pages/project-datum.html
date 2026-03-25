@@ -1,83 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Datum — Urban Masterplan by Aanya Sharma. An internship project exploring urban design at the neighbourhood scale." />
-  <title>Datum — Aanya Sharma</title>
+  <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Datum — Beats &amp; Bricks Design Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@200;300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/loader.css" />
 </head>
 <body>
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-follower" id="cursorFollower"></div>
-  <nav class="nav" id="mainNav">
-    <a href="../index.html" class="nav-logo">A.S.</a>
-    <ul class="nav-links">
-      <li><a href="../index.html" class="active">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="../assets/portfolio.pdf" class="nav-cta" target="_blank" download>↓ Portfolio PDF</a>
-  </nav>
-  <section class="project-hero">
-    <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1600&q=85" alt="Datum — Urban Masterplan" />
-    <div class="project-hero-caption fade-up fade-up-1">
-      <h1>Datum</h1>
-      <div class="meta"><span>Internship Project</span><span>2022</span><span>Urban Masterplan</span></div>
+  <div id="page-loader"><img class="loader-logo" src="../assets/WhatsApp Image 2026-03-25 at 16.15.27.jpeg" alt="B&B" /><div class="loader-bar-track"><div class="loader-bar-fill"></div></div><p class="loader-tagline"><span class="word">Every&nbsp;</span><span class="word">space&nbsp;</span><span class="word">has&nbsp;</span><span class="word">a&nbsp;</span><span class="word">rhythm.&nbsp;</span><span class="word">We&nbsp;</span><span class="word">design&nbsp;</span><span class="word">it.</span></p><span class="loader-studio-name">Beats &amp; Bricks Design Studio</span></div>
+  <div class="cursor" id="cursor"></div><div class="cursor-follower" id="cursorFollower"></div>
+  <header class="top-bar" id="topBar"><button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button><nav class="top-nav"><a href="../index.html" class="top-nav-link active">Projects</a><a href="about.html" class="top-nav-link">About</a><a href="contact.html" class="top-nav-link">Contact</a></nav><div class="top-bar-right"><span class="top-bar-location">New Delhi</span></div></header>
+  <aside class="sidebar" id="sidebar"><div class="sidebar-logo"><a href="../index.html"><img src="../assets/WhatsApp Image 2026-03-25 at 16.15.27.jpeg" alt="Beats & Bricks" /></a></div><nav class="sidebar-nav"><ul><li class="nav-item" style="--i:0"><a href="../index.html" class="sidebar-link active">Projects</a></li><li class="nav-item" style="--i:1"><a href="about.html" class="sidebar-link">About</a></li><li class="nav-item" style="--i:2"><a href="about.html#internships" class="sidebar-link">Studio</a></li><li class="nav-item" style="--i:3"><a href="about.html#skills" class="sidebar-link">Services</a></li><li class="nav-item" style="--i:4"><a href="about.html" class="sidebar-link">People</a></li><li class="nav-item" style="--i:5"><a href="contact.html" class="sidebar-link">Careers</a></li><li class="nav-item" style="--i:6"><a href="contact.html" class="sidebar-link">Contact</a></li></ul></nav><div class="sidebar-bottom"><a href="../assets/portfolio.pdf" class="sidebar-pdf" download>↓ Portfolio PDF</a></div></aside>
+
+  <div class="page-layout" id="mainContent">
+    <section class="project-hero">
+      <img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=1600&q=85" alt="Datum" />
+      <div class="project-hero-caption fade-up fade-up-1">
+        <h1>Datum</h1>
+        <div class="meta"><span>Internship Project</span><span>2022</span><span>Urban Masterplan</span></div>
+      </div>
+    </section>
+    <div class="project-body">
+      <section class="project-section reveal">
+        <div class="section-label">01 &mdash; Concept</div>
+        <h2>A Line That Organises</h2>
+        <p>Datum began as an urban design commission for a 12-hectare brownfield redevelopment in Gurugram. The masterplan proposes a linear datum — a continuous public spine — that organises the development and offers a pedestrian armature connecting all precincts.</p>
+      </section>
+      <section class="project-section reveal">
+        <div class="section-label">02 &mdash; Design Process</div>
+        <h2>GIS Analysis to Urban Strategy</h2>
+        <div class="project-img-grid cols-2">
+          <figure class="reveal"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700&q=75" alt="GIS map" /></figure>
+          <figure class="reveal"><img src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?w=700&q=75" alt="Framework plan" /></figure>
+        </div>
+      </section>
+      <section class="project-section reveal">
+        <div class="section-label">03 &mdash; Final Outcome</div>
+        <h2>The Public Spine</h2>
+        <div class="project-img-grid cols-2">
+          <figure class="wide reveal"><img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=900&q=80" alt="Masterplan" /></figure>
+          <figure class="reveal"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=75" alt="Spine perspective" /></figure>
+        </div>
+      </section>
+      <section class="project-section reveal">
+        <div class="section-label">04 &mdash; My Role</div>
+        <h2>Intern — Studio Symbiosis · 2022</h2>
+        <div class="role-callout"><h3>What I did</h3><ul><li>Assisted in site analysis and GIS mapping</li><li>Produced detailed drawings for public realm sections</li><li>Developed 3D model of the datum spine in SketchUp</li><li>Prepared presentation drawings for client pitch</li></ul></div>
+      </section>
+      <nav class="project-nav reveal">
+        <a href="project-membrane.html"><span class="dir">← Previous</span><span class="ptitle">Membrane</span></a>
+        <a href="project-urban-void.html"><span class="dir">Back to Start →</span><span class="ptitle">Urban Void</span></a>
+      </nav>
     </div>
-  </section>
-  <div class="project-body">
-    <section class="project-section reveal">
-      <div class="section-label">01 &mdash; Concept</div>
-      <h2>A Line That Organises</h2>
-      <p>Datum began as an urban design commission for a 12-hectare brownfield redevelopment in Gurugram. The masterplan proposes a linear datum — a continuous public spine — that organises the development and offers a pedestrian armature connecting all precincts.</p>
-      <p>The datum is not a road but a sequence of public rooms: a market, a square, a garden, a cultural forecourt — each with its own character, stitched together by a tree-lined promenade.</p>
-    </section>
-    <section class="project-section reveal">
-      <div class="section-label">02 &mdash; Design Process</div>
-      <h2>GIS Analysis to Urban Strategy</h2>
-      <p>The process began with GIS mapping of movement patterns, urban density, and land use in the surrounding context. These were distilled into a set of design principles that drove the masterplan geometry.</p>
-      <div class="project-img-grid cols-2">
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700&q=75" alt="GIS analysis map" /></figure>
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1462206092226-f46025ffe607?w=700&q=75" alt="Framework plan" /></figure>
-      </div>
-    </section>
-    <section class="project-section reveal">
-      <div class="section-label">03 &mdash; Final Outcome</div>
-      <h2>The Public Spine</h2>
-      <div class="project-img-grid cols-2">
-        <figure class="wide reveal"><img src="https://images.unsplash.com/photo-1620121692029-d088224ddc74?w=900&q=80" alt="Masterplan aerial" /></figure>
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=600&q=75" alt="Public spine perspective" /></figure>
-      </div>
-    </section>
-    <section class="project-section reveal">
-      <div class="section-label">04 &mdash; My Role</div>
-      <h2>Intern — Studio Symbiosis · 2022</h2>
-      <div class="role-callout">
-        <h3>What I did</h3>
-        <ul>
-          <li>Assisted senior designers in Site analysis and GIS mapping</li>
-          <li>Produced detailed drawings for public realm sections</li>
-          <li>Developed a 3D model of the datum spine in SketchUp</li>
-          <li>Prepared presentation drawings for client pitch</li>
-        </ul>
-      </div>
-    </section>
-    <nav class="project-nav reveal">
-      <a href="project-membrane.html"><span class="dir">← Previous</span><span class="ptitle">Membrane</span></a>
-      <a href="project-urban-void.html"><span class="dir">Back to Start →</span><span class="ptitle">Urban Void</span></a>
-    </nav>
+    <footer class="site-footer"><div class="footer-left"><span>© 2025 Beats &amp; Bricks Design Studio</span></div><div class="footer-right"><a href="mailto:hello@beatsbricks.design">hello@beatsbricks.design</a><a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a></div></footer>
   </div>
-  <footer class="site-footer">
-    <div class="footer-left"><span>© 2025 Aanya Sharma</span></div>
-    <div class="footer-right">
-      <a href="mailto:aanya@arch.design">aanya@arch.design</a>
-      <a href="https://linkedin.com/in/aanyasharma" target="_blank" rel="noopener">LinkedIn ↗</a>
-    </div>
-  </footer>
   <script src="../assets/main.js"></script>
 </body>
 </html>
