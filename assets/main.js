@@ -7,39 +7,46 @@
   const loader = document.getElementById('page-loader');
   if (!loader) return;
 
-  function dismissLoader() {
+  // Reliable dismiss: CSS transition (.exiting) → hide after transition ends
+  function dismissLoader(callback) {
     document.body.style.overflow = '';
-    loader.classList.add('exit');
-    loader.addEventListener('animationend', () => {
+    loader.classList.add('exiting');
+    // setTimeout is 100% reliable — no dependency on animationend
+    setTimeout(() => {
       loader.classList.add('hide');
-    }, { once: true });
+      if (callback) callback();
+    }, 700);
   }
 
-  // Only show on first visit this session
+  function showLoader(onDone) {
+    loader.classList.remove('hide', 'exiting');
+    void loader.offsetWidth; // force reflow — restarts CSS keyframe animations
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => dismissLoader(onDone), 2300);
+  }
+
+  // Show loader for first visit only (sessionStorage flag)
   if (sessionStorage.getItem('bb_loader_seen')) {
+    // Already seen this session — hide instantly, no flash
     loader.classList.add('hide');
     document.body.style.overflow = '';
   } else {
+    // First visit — run full loader sequence
     sessionStorage.setItem('bb_loader_seen', '1');
-    document.body.style.overflow = 'hidden';
-    setTimeout(dismissLoader, 2400);
+    showLoader();
   }
 
-  // Logo click in sidebar re-triggers the loader then navigates
-  document.querySelectorAll('.sidebar-logo a').forEach(el => {
-    el.addEventListener('click', e => {
-      e.preventDefault();
-      const dest = el.getAttribute('href') || '../index.html';
-      // Reset and replay loader
-      loader.classList.remove('hide', 'exit');
-      void loader.offsetWidth; // force reflow to restart CSS animations
-      document.body.style.overflow = 'hidden';
-      setTimeout(() => {
-        dismissLoader();
-        setTimeout(() => { window.location.href = dest; }, 650);
-      }, 2400);
-    });
+  // Home links in sidebar: navigate home (standard behavior)
+  document.querySelectorAll('.sidebar-link[href="index.html"], .sidebar-link[href="../index.html"]').forEach(el => {
+    // We let these stay as standard links, or maybe show loader only if explicitly desired.
+    // The user asked to REMOVE loader on logo click, so we'll ensure the topbar logo only toggles.
   });
+
+  // Dev helper: call resetLoader() in console to replay
+  window.resetLoader = function() {
+    sessionStorage.removeItem('bb_loader_seen');
+    showLoader();
+  };
 })();
 
 // ─── CUSTOM CURSOR ────────────────────────────────────────
@@ -134,20 +141,22 @@
 
 // ─── CATEGORY FILTER ──────────────────────────────────────
 (function initFilter() {
-  const filterLinks = document.querySelectorAll('.top-nav-link[data-filter]');
-  const rows        = document.querySelectorAll('.project-row');
-  if (!filterLinks.length) return;
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const rows       = document.querySelectorAll('.project-row');
+  if (!filterBtns.length) return;
 
-  filterLinks.forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      filterLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-      const filter = link.dataset.filter;
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Manage active state
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
       rows.forEach(row => {
         if (filter === 'all') {
           row.classList.remove('hidden');
         } else {
+          // If project row data-category exactly matches the filter button's data-filter
           row.classList.toggle('hidden', row.dataset.category !== filter);
         }
       });

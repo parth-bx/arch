@@ -1,84 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Membrane — Adaptive Façade research by Aanya Sharma. A parametric study of responsive building skins." />
-  <title>Membrane — Aanya Sharma</title>
+  <title>Membrane — Beats &amp; Bricks Design Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300&family=DM+Sans:wght@200;300;400&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Sans:wght@200;300;400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="../assets/style.css" />
+  <link rel="stylesheet" href="../assets/loader.css" />
 </head>
+
 <body>
+  <div id="page-loader" role="status" aria-label="Loading">
+    <img class="loader-logo" src="../assets/WhatsApp Image 2026-03-25 at 16.15.27.jpeg" alt="Beats & Bricks" />
+    <div class="loader-bar-track">
+      <div class="loader-bar-fill"></div>
+    </div>
+    <p class="loader-tagline"><span class="word">Every&nbsp;</span><span class="word">space&nbsp;</span><span
+        class="word">has&nbsp;</span><span class="word">a&nbsp;</span><span class="word">rhythm.&nbsp;</span><span
+        class="word">We&nbsp;</span><span class="word">design&nbsp;</span><span class="word">it.</span></p>
+    <span class="loader-studio-name">Beats &amp; Bricks Design Studio</span>
+  </div>
   <div class="cursor" id="cursor"></div>
   <div class="cursor-follower" id="cursorFollower"></div>
-  <nav class="nav" id="mainNav">
-    <a href="../index.html" class="nav-logo">A.S.</a>
-    <ul class="nav-links">
-      <li><a href="../index.html" class="active">Work</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <a href="../assets/portfolio.pdf" class="nav-cta" target="_blank" download>↓ Portfolio PDF</a>
-  </nav>
-  <section class="project-hero">
-    <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1600&q=85" alt="Membrane — Adaptive Façade" />
-    <div class="project-hero-caption fade-up fade-up-1">
-      <h1>Membrane</h1>
-      <div class="meta"><span>Research Project</span><span>2023</span><span>Adaptive Façade</span></div>
-    </div>
-  </section>
-  <div class="project-body">
-    <section class="project-section reveal">
-      <div class="section-label">01 &mdash; Concept</div>
-      <h2>A Skin That Breathes</h2>
-      <p>Membrane is a research-led design project exploring the potential of parametrically driven façade systems that respond dynamically to environmental conditions — sun angle, wind direction, and internal occupancy.</p>
-      <p>The project draws on biomimetic principles: the way a leaf regulates transpiration, or a pinecone opens and closes with humidity, to propose a building envelope that is genuinely adaptive rather than merely decorative.</p>
-    </section>
-    <section class="project-section reveal">
-      <div class="section-label">02 &mdash; Design Process</div>
-      <h2>Grasshopper + Physical Prototype</h2>
-      <p>The parametric model was built in Grasshopper with Ladybug tools for environmental simulation. Physical 1:5 scale prototypes were fabricated from 0.8mm aluminium sheet with laser-cut aperture patterns, tested for airflow and shading effectiveness.</p>
-      <div class="project-img-grid cols-2">
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?w=700&q=75" alt="Grasshopper script" /></figure>
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75" alt="Physical prototype" /></figure>
-      </div>
-    </section>
-    <section class="project-section reveal">
-      <div class="section-label">03 &mdash; Final Outcome</div>
-      <h2>Three Aperture States</h2>
-      <div class="project-img-grid cols-3">
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=500&q=75" alt="Closed state" /></figure>
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=500&q=75" alt="Partially open" /></figure>
-        <figure class="reveal"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=500&q=75" alt="Fully open" /></figure>
-      </div>
-    </section>
-    <section class="project-section reveal">
-      <div class="section-label">04 &mdash; My Role</div>
-      <h2>Independent Research — 4th Year Elective</h2>
-      <div class="role-callout">
-        <h3>What I did</h3>
-        <ul>
-          <li>Built the parametric model from scratch using Grasshopper and Ladybug</li>
-          <li>Fabricated three physical prototypes at different aperture states</li>
-          <li>Conducted environmental performance tests and documented results</li>
-          <li>Wrote and presented a 6,000-word research paper</li>
-        </ul>
-      </div>
-    </section>
-    <nav class="project-nav reveal">
-      <a href="project-canopy.html"><span class="dir">← Previous</span><span class="ptitle">Canopy</span></a>
-      <a href="project-datum.html"><span class="dir">Next →</span><span class="ptitle">Datum</span></a>
+
+  <header class="top-bar" id="topBar">
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" title="Menu">
+      <img src="../assets/WhatsApp Image 16.15.27.jpeg" alt="Beats & Bricks" class="topbar-logo-btn" />
+    </button>
+    <nav class="top-nav">
+      <a href="../index.html" class="top-nav-link active">Projects</a>
+      <a href="about.html" class="top-nav-link">About</a>
+      <a href="contact.html" class="top-nav-link">Contact</a>
     </nav>
-  </div>
-  <footer class="site-footer">
-    <div class="footer-left"><span>© 2025 Aanya Sharma</span></div>
-    <div class="footer-right">
-      <a href="mailto:aanya@arch.design">aanya@arch.design</a>
-      <a href="https://linkedin.com/in/aanyasharma" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <div class="top-bar-right"><span class="top-bar-location">Mumbai</span></div>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <nav class="sidebar-nav" style="padding-top: 2rem;">
+      <ul>
+        <li class="nav-item" style="--i:0"><a href="../index.html" class="sidebar-link active">Projects</a></li>
+        <li class="nav-item" style="--i:1"><a href="about.html" class="sidebar-link">About</a></li>
+        <li class="nav-item" style="--i:2"><a href="contact.html" class="sidebar-link">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="sidebar-bottom">
+      <a href="../assets/portfolio.pdf" class="sidebar-pdf" download>↓ Portfolio PDF</a>
     </div>
-  </footer>
+  </aside>
+
+  <div class="page-layout" id="mainContent">
+    <section class="project-hero">
+      <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=1600&q=80" alt="Membrane — Set Design" />
+      <div class="project-hero-caption fade-up fade-up-1">
+        <h1>Membrane</h1>
+        <div class="meta"><span>Creative Project</span><span>2023</span><span>Set Design</span></div>
+      </div>
+    </section>
+
+    <div class="project-body">
+      <section class="project-section reveal">
+        <div class="section-label">01 &mdash; Concept</div>
+        <h2>Atmospheric Spaces & Visual Storytelling</h2>
+        <p>Beats & Bricks Studio ventures into set design, creating visually compelling environments that bring stories
+          to life. Blending architectural precision with artistic expression, each set is designed to enhance mood,
+          narrative, and performance — delivering impactful spatial experiences for events, shoots, and productions.</p>
+        <p>Membrane focuses on the skin as a dynamic storyteller, using layered fabrics and light to create a shifting
+          environment for a performance piece.</p>
+      </section>
+
+      <section class="project-section reveal">
+        <div class="section-label">02 &mdash; Design Process</div>
+        <h2>Mood, Movement & Light</h2>
+        <p>Studying the interaction between camera movement and set geometry. Using fabric prototypes to test
+          transparency and light bounce. Every element is tested to ensure it contributes to the overall emotional arc
+          of the production.</p>
+        <div class="project-img-grid cols-2">
+          <figure class="reveal"><img src="https://images.unsplash.com/photo-1533090161767-e6ffed986c88?w=700&q=75"
+              alt="Sketching scene" /></figure>
+          <figure class="reveal"><img src="https://images.unsplash.com/photo-1516339901601-2e1b62dc0c45?w=700&q=75"
+              alt="Set build" /></figure>
+        </div>
+      </section>
+
+      <section class="project-section reveal">
+        <div class="section-label">03 &mdash; Final Outcome</div>
+        <h2>A Story Brought to Life</h2>
+        <div class="project-img-grid cols-asymm">
+          <figure class="wide reveal"><img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=900&q=80"
+              alt="Set render" /></figure>
+          <figure class="reveal"><img src="https://images.unsplash.com/photo-1524143878510-e3b8d6312402?w=600&q=75"
+              alt="Detail view" /></figure>
+        </div>
+      </section>
+
+      <section class="project-section reveal">
+        <div class="section-label">04 &mdash; My Role</div>
+        <h2>Set Designer · Beats & Bricks Studio</h2>
+        <div class="role-callout">
+          <h3>Work Performed</h3>
+          <ul>
+            <li>Developed the visual language and mood-boards for the set design</li>
+            <li>Created 3D models and technical drawings for the production crew</li>
+            <li>Collaborated with the lighting director for atmospheric effects</li>
+            <li>On-site supervision during assembly and shoot days</li>
+          </ul>
+        </div>
+      </section>
+
+      <nav class="project-nav reveal">
+        <a href="project-canopy.html"><span class="dir">← Previous</span><span class="ptitle">Canopy</span></a>
+        <a href="project-datum.html"><span class="dir">Next →</span><span class="ptitle">Datum</span></a>
+      </nav>
+    </div>
+
+    <footer class="site-footer">
+      <div class="footer-left"><span>© 2025 Beats &amp; Bricks Design Studio</span></div>
+      <div class="footer-right">
+        <a href="mailto:hello@beatsbricks.design">hello@beatsbricks.design</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+    </footer>
+  </div>
   <script src="../assets/main.js"></script>
 </body>
+
 </html>
